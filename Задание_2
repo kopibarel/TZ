@@ -1,1 +1,60 @@
+1)
+GET /api/v1/partner-stores?lat=11.111111&lon=22.222222
+lat, lon — координаты пользователя - для сортировки по близости
+возможно ещё передать id города city_id=333
 
+2)
+{
+  "success": true,
+  "data": {
+    "stores": [
+      {
+        "id": 1,
+        "name": "METRO",
+        "Label": "Ближайшая доставка сегодня 21:00-23:00",
+        "Type": "scheduled",
+        "IntervalStart": "21:00",
+        "IntervalEnd": "23:00",
+        "Date": "сегодня",
+        "Link": "https://metro.ru/delivery?partner=petrushka",
+        "Icon": "https://petrushka.ru/assets/stores/metro.png",
+        "Priority": 1
+      },
+      {
+        "id": 2,
+        "name": "Ашан",
+        "Label": "Ближайшая доставка сегодня 18:00-20:00",
+        "Type": "scheduled",
+        "IntervalStart": "18:00",
+        "IntervalEnd": "20:00",
+        "Date": "сегодня",
+        "Link": "https://auchan.ru/delivery?affiliate=petrushka",
+        "Icon": "https://petrushka.ru/assets/stores/auchan.png",
+        "Priority": 2
+      },
+      {
+        "id": 3,
+        "name": "ВкусВилл",
+        "Label": "Быстрая доставка от 20 до 60 минут",
+        "Type": "fast",
+        "MinMinutes": 20,
+        "MaxMinutes": 60,
+        "Link": "https://vkusvill.ru/express?ref=petrushka",
+        "Icon": "https://petrushka.ru/assets/stores/vkusvill.png",
+        "Priority": 3
+      },
+      {
+        "id": 4,
+        "name": "ВИКТОРИЯ",
+        "Label": "Ближайшая доставка сегодня 17:00-19:00",
+        "Type": "scheduled",
+        "IntervalStart": "17:00",
+        "IntervalEnd": "19:00",
+        "Date": "сегодня",
+        "Link": "https://victoria.ru/order?partner=petrushka",
+        "Icon": "https://petrushka.ru/assets/stores/victoria.png",
+        "Priority": 4
+      }
+    ]
+  }
+}
